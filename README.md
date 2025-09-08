@@ -16,7 +16,7 @@ Project Diagram
 
 Contributing
 
-Features 
+Features 🏷️
 Analyzes images stored in an Amazon S3 bucket.
 
 Uses AWS Rekognition's detect-labels API to identify objects and scenes.
@@ -27,7 +27,7 @@ Displays labels and confidence scores on the image.
 
 Visualizes results using the Matplotlib library.
 
-Architecture 
+Architecture ⚙️
 The application follows a simple cloud-based architecture:
 
 Image Upload: An image is manually uploaded to an Amazon S3 bucket.
@@ -38,7 +38,7 @@ Data Processing: The Rekognition response (containing labels and bounding box co
 
 Visualization: The script uses Matplotlib to display the image and overlay the generated labels and bounding boxes.
 
-Technologies Used
+Technologies Used 💻
 Python: The core programming language for the application logic.
 
 AWS SDK for Python (Boto3): Used to interact with AWS services like S3 and Rekognition.
@@ -51,7 +51,7 @@ Matplotlib: A Python plotting library used for generating the visual output (dis
 
 Pillow (PIL): Used by Matplotlib for image handling.
 
-Setup and Installation 
+Setup and Installation 🛠️
 Prerequisites
 An AWS account with an IAM user having permissions for s3:GetObject and rekognition:DetectLabels.
 
@@ -60,15 +60,13 @@ Python 3.x installed on your machine.
 Step 1: Install Dependencies
 Navigate to your project directory in your terminal and install the required libraries:
 
-Bash
-
 pip install boto3 pillow matplotlib
+
 Step 2: AWS Configuration
 Configure your AWS CLI with your IAM user credentials.
 
-Bash
-
 aws configure
+
 Enter your Access Key ID, Secret Access Key, preferred AWS region (e.g., ap-southeast-1), and json as the output format.
 
 Step 3: Create S3 Bucket and Upload Image
@@ -76,24 +74,25 @@ Create an S3 bucket in your AWS Management Console (e.g., my-image-label-repo-20
 
 Upload an image to your bucket. Remember its full key (e.g., my_test_image.jpg or images/my_test_image.jpg).
 
-How to Use 
+How to Use ▶️
 Open the image_label_generator.py file.
 
 Update the three configuration variables at the top of the file to match your setup:
 
-Python
-
 S3_BUCKET_NAME = 'YOUR_S3_BUCKET_NAME' # e.g., 'my-image-label-repo-2025'
 AWS_REGION = 'YOUR_AWS_REGION' # e.g., 'ap-southeast-1'
 IMAGE_S3_KEY = 'YOUR_IMAGE_S3_KEY' # e.g., 'images/my_test_image.jpg'
+
 Save the file.
 
 Run the script from your terminal:
 
-Bash
-
 python image_label_generator.py
+
 The script will print the detected labels to the console, and a new window will pop up showing the image with bounding boxes and labels.
 
-Project Diagram 
+Project Diagram 🖼️
 The project is based on the following architectural diagram:
+
+Contributing 🤝
+Feel free to open an issue or submit a pull request if you'd like to improve the project.
